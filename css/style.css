@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&family=Sono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&family=Sono:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    background: #1f242d;
+    color: #fff;
+}
+
+header{
+    margin: 10px 0;
+    align-items: center;
+}
+
+header.h1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+h3.topo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;        
+}
+
+input{
+    border-radius: 5px;
+    height: 30px;
+    font-size: 0.7rem;
+    padding-left: 5px;
+    width: 250px;
+}
+
+textarea{
+    width: 250px;
+    height: 70px;
+    border-radius: 5px;
+    padding-left: 5px;
+    
+}
+    
