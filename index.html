@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c600d5d8fe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
   </head>
@@ -12,6 +13,7 @@
       <h1 class="titulo">WikAnime</h1>
     </header>
     <main>
+      <div class="adiciona-cards">
         <h3 class="topo">Adicione seu personagem</h3>
         <form class="formulario" action="#">
             <input type="text" placeholder="Titulo">
@@ -19,6 +21,14 @@
             <!-- <input type="text" placeholder="Descrição"> -->            
             <input type="url" placeholder="URL da imagem">            
             <textarea placeholder="Descrição"></textarea>
+            <button type="submit">
+              adicionar
+              <i class="fa-solid fa-person-circle-plus"></i>
+            </button>
+            <button class="reset" type="reset">
+              apagar tudo
+              <i class="fa-solid fa-trash-arrow-up"></i>
+            </button>
         </form>
         
       </div>
