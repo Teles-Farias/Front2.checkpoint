@@ -7,25 +7,21 @@
     box-sizing: border-box; 
     font-family: 'Sono', sans-serif;   
 }
-
 body{
     background: #1f242d;
     color: #fff;
-    
+    overflow-x: hidden;
 }
-
 header{
     margin: 10px 0;
     align-items: center;
     padding: 15px;
 }
-
 header h1{
     display: flex;
     justify-content: center;
     width: 100%;
 }
-
 h3.topo{
     display: flex;
     align-items: center;
@@ -58,7 +54,6 @@ main {
     justify-content: space-between;
     height: 380px;        
 }
-
 input{
     border-radius: 20px;
     height: 45px;
@@ -72,7 +67,6 @@ input{
     padding-left: 10px;
     width: 65%;
 }
-
 textarea{
     width: 65%;
     max-width: 68%;
@@ -101,7 +95,6 @@ button {
     color: green;
     height: 50px;
 }
-
 button:hover {
     background-color: rgb(24, 183, 24);
     border: none;
@@ -115,4 +108,46 @@ button:hover {
 .reset:hover {
     background-color: rgb(227, 227, 31);
     box-shadow: 1px 2px 20px 1px rgba(227, 227, 31, 0.3)
+}
+.cards-area {
+    width: 95vw;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    width: 350px;
+    display: flex;
+    cursor: pointer;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #262b34;
+    transition: all .6s ease-in-out;
+    border-radius: 20px;
+    height: 580px;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.3);
+}
+.card img {
+    width: 100%;
+    border-radius: 20px;
+}
+.card .personagem {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.card .card-titulo {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.card .descricao {
+    width: 90%;
+    padding: 10px;
 }
