@@ -47,11 +47,6 @@ function criaCard(campos) {
 
 })
 
-if (condition) {
-    
-} else {
-    
-}
 
 
 
