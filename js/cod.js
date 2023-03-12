@@ -31,8 +31,23 @@ function criaCard(campos) {
     return div;
 }
 
-form.addEventListener("submit", (e)=>{
-    e.preventDefault();
+ form.addEventListener("submit",(e)=>{
+   e.preventDefault();
+    let novaLista=[];
+    input.forEach(campo=>{
+        novaLista.push(campo.value)
+    })    
+     if (novaLista.indexOf('')!== -1 || novaLista.indexOf(null)!== -1){
+        console.log('Você Não preencheu todos os campos')
+    }else {
+        if (novaLista[0].length<4 || novaLista[3].length<4){
+            console.log('O campos preenchido não esta de acordo')
+        }
+    }   
+
 })
+
+
+
 
 
