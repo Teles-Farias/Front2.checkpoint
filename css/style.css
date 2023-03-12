@@ -101,6 +101,12 @@ button:hover {
     color: #fff;
     box-shadow: 1px 2px 20px 1px rgba(26, 236, 11, 0.3);
 }
+button:disabled{
+    background-color: grey;
+    border: none;
+    color: #fff;
+    box-shadow: none;
+}
 .reset {
     border-color: rgb(227, 227, 31);
     color: rgb(227, 227, 31);
