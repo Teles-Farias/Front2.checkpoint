@@ -7,10 +7,7 @@ function criaCard(campos) {
     let div = document.createElement("div");
     div.classList.add("card");
 
-    let imagem = document.createElement("img");
-    imagem.src = `${campos[2].value}`;
-
-    let h3 = document.createElement("h3");
+       let h3 = document.createElement("h3");
     h3.classList.add("personagem");
     h3.innerHTML = `${campos[0].value}`;
 
@@ -18,14 +15,17 @@ function criaCard(campos) {
     h4.classList.add("card-titulo");
     h4.innerHTML = `${campos[1].value}`;
 
-    let p = document.createElement("p");
-    p.classList.add("descricao");
-    p.innerHTML = `${campos[3].value}`;
+    let imagem = document.createElement("img");
+    imagem.src = `${campos[2].value}`;
+   
+    let textarea = document.createElement("textarea");
+    textarea.classList.add("descricao");
+    textarea.innerHTML = `${campos[2].value}`;
 
     div.appendChild(imagem);
     div.appendChild(h3);
     div.appendChild(h4);
-    div.appendChild(p);
+    div.appendChild(textarea);
 
     cardsArea.appendChild(div);
     return div;
@@ -38,14 +38,20 @@ function criaCard(campos) {
         novaLista.push(campo.value)
     })    
      if (novaLista.indexOf('')!== -1 || novaLista.indexOf(null)!== -1){
-        console.log('Você Não preencheu todos os campos')
+        alert('Você Não preencheu todos os campos')
     }else {
-        if (novaLista[0].length<4 || novaLista[3].length<4){
-            console.log('O campos preenchido não esta de acordo')
+        (novaLista[0].length <4 && novaLista[3].length <4);{
+            alert('O campos preenchido não esta de acordo')
         }
     }   
 
 })
+
+if (condition) {
+    
+} else {
+    
+}
 
 
 
