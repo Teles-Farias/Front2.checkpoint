@@ -166,8 +166,9 @@ button:disabled{
     z-index: 3;
 }
 .card img {
-    width: 100%;
+    max-width: 350px;
     border-radius: 20px;
+    height: 300px;
 }
 .card .personagem {
     margin-top: 10px;
