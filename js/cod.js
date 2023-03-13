@@ -1,54 +1,60 @@
 const form = document.querySelector("form");
 const input = document.querySelectorAll(".campo");
 let cardsArea = document.querySelector(".cards-area");
+let buttonSubmit = document.querySelector(".submit-btn");
+const spans = document.querySelectorAll("span");
 
-//titulo, personagem, img, descricao
 function criaCard(campos) {
     let div = document.createElement("div");
     div.classList.add("card");
 
-       let h3 = document.createElement("h3");
+    let h3 = document.createElement("h3");
     h3.classList.add("personagem");
-    h3.innerHTML = `${campos[0].value}`;
+    h3.innerText = `${campos[0].value}`;
 
     let h4 = document.createElement("h4");
     h4.classList.add("card-titulo");
-    h4.innerHTML = `${campos[1].value}`;
+    h4.innerText = `${campos[1].value}`;
 
     let imagem = document.createElement("img");
     imagem.src = `${campos[2].value}`;
    
-    let textarea = document.createElement("textarea");
-    textarea.classList.add("descricao");
-    textarea.innerHTML = `${campos[2].value}`;
+    let p = document.createElement("p");
+    p.classList.add("descricao");
+    p.innerText = `${campos[3].value}`;
 
     div.appendChild(imagem);
     div.appendChild(h3);
     div.appendChild(h4);
-    div.appendChild(textarea);
+    div.appendChild(p);
 
     cardsArea.appendChild(div);
-    return div;
+}
+function chamaErro(){
+    input[0].classList.add("erro");
+    input[3].classList.add("erro");
+    spans.forEach(span => {
+        span.innerHTML = "Deve ter mais que 4 caracteres";
+    })
 }
 
- form.addEventListener("submit",(e)=>{
-   e.preventDefault();
-    let novaLista=[];
-    input.forEach(campo=>{
-        novaLista.push(campo.value)
-    })    
-     if (novaLista.indexOf('')!== -1 || novaLista.indexOf(null)!== -1){
-        alert('Você Não preencheu todos os campos')
+function comeca(){
+    let listaInputs = [input[0].value, input[1].value, input[2].value, input[3].value];
+    if(listaInputs.indexOf('') !== -1 || listaInputs.indexOf(null) !== -1) {
+        buttonSubmit.disabled = true;
     }else {
-        (novaLista[0].length <4 && novaLista[3].length <4);{
-            alert('O campos preenchido não esta de acordo')
-        }
-    }   
-
+        buttonSubmit.disabled = false;  
+    }
+}
+form.addEventListener("submit", (e) => {
+    let listaInputs = [input[0].value, input[1].value, input[2].value, input[3].value];
+    e.preventDefault();
+    if(listaInputs[0].length < 4 || listaInputs[3].length < 4){
+        chamaErro();
+    }else {
+        criaCard(input);
+    }
 })
-
-
-
-
-
-
+input.forEach(campo =>{
+    campo.addEventListener("keydown", comeca);
+})
