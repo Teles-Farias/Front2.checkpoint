@@ -158,7 +158,7 @@ button:disabled{
     background-color: #262b34;
     transition: all .6s ease-in-out;
     border-radius: 20px;
-    height: 580px;
+    height: auto;
 }
 .card:hover {
     transform: scale(1.05);
@@ -183,4 +183,9 @@ button:disabled{
 .card .descricao {
     width: 90%;
     padding: 10px;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+.card img#kusuriuri{
+    width: 350px;
 }

@@ -49,7 +49,7 @@ function comeca(){
 form.addEventListener("submit", (e) => {
     let listaInputs = [input[0].value, input[1].value, input[2].value, input[3].value];
     e.preventDefault();
-    if(listaInputs[0].length < 4 || listaInputs[3].length < 4){
+    if(listaInputs[0].length < 4 && listaInputs[3].length < 4){
         chamaErro();
     }else {
         criaCard(input);
